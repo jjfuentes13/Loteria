@@ -1,9 +1,14 @@
 let getNewBoard = document.getElementById("random_bt");
+let doSingleBoard = document.getElementById("single_bt");
 
 // add event listener to the button to create a new board 
 getNewBoard.addEventListener("click", function() {
   newBoard(traditonalDeck);
 }) 
+
+doSingleBoard.addEventListener("click", function() {
+  singleBoard(traditonalDeck);
+})
 
 let traditonalDeck = [
   "LoteriaCards/Alacran.jpeg",
@@ -106,16 +111,43 @@ function newBoard(array) {
   }
 
   boardElements(array);
+  createBoard(array);
+  createBoard2(array);
+}
 
-// create new img elements for the board in a loop to add 4 images from the array to the board
-  for (let i = 0; i < 16; i++) {
-    let square = document.createElement("img");
-    square.setAttribute("src", array[i]);
-    square.setAttribute("class", "square");
-    getBoard.appendChild(square);
+function singleBoard(array) { 
+  // removing elements from the board in html 
+    let getBoard = document.getElementById("board");
+    let getBoard2 = document.getElementById("board2");
+  
+    while (getBoard.firstChild) {
+      getBoard.removeChild(getBoard.firstChild);
+    }
+  
+    while (getBoard2.firstChild) {
+      getBoard2.removeChild(getBoard2.firstChild);
+    }
+  
+    boardElements(array);
+    createBoard(array);
   }
 
-// create new img elements for board 2 in a loop from setting from end of array to beginning
+
+function createBoard(array) {
+  let getBoard = document.getElementById("board");
+// create new img elements for the board in a loop to add 4 images from the array to the board
+for (let i = 0; i < 16; i++) {
+  let square = document.createElement("img");
+  square.setAttribute("src", array[i]);
+  square.setAttribute("class", "square");
+  getBoard.appendChild(square);
+}
+}
+
+function createBoard2(array) {
+
+  
+  let getBoard2 = document.getElementById("board2"); 
   for (let i = 16; i < 32; i++) {
     let square = document.createElement("img");
     square.setAttribute("src", array[i]);
@@ -123,6 +155,3 @@ function newBoard(array) {
     getBoard2.appendChild(square);
   }
 }
-
-
-

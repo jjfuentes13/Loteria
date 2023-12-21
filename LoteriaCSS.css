@@ -3,10 +3,15 @@
     padding: 0;
 }
 
+
+/* @media (min-width: 770px) { */
+   
+
 .board {
     display: grid;
     grid-template-columns: repeat(4, 130px); /* Creates 4 columns */
     grid-template-rows: repeat(4, 185px); /* Creates 4 rows */
+    border: 2px black solid;
     /* row-gap: 5px; /* Adjust as needed for spacing between images */
     justify-content: center;
     align-items: center;
@@ -23,3 +28,9 @@
     display: grid;
     grid-template-columns: auto auto;
 }
+
+/* }
+
+@media (max-width: 769px) {
+    
+} */
