@@ -11,16 +11,18 @@
     display: grid;
     grid-template-columns: repeat(4, 130px); /* Creates 4 columns */
     grid-template-rows: repeat(4, 185px); /* Creates 4 rows */
+    /* max-width: 480px;
+    max-height: 384px; */
     border: 2px black solid;
-    /* row-gap: 5px; /* Adjust as needed for spacing between images */
+    /* row-gap: 0px; */
     justify-content: center;
     align-items: center;
 }
 
 .square {
-    width: 130px;
-    height: 175px;
-    /* border: 2px solid black; */
+    width: 115px;
+    height: 170px;
+    border: 2px solid black;
     object-fit: contain; /* This will ensure that images cover the div without stretching */
 }
 
