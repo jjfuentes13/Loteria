@@ -100,19 +100,19 @@ function boardElements(array) {
 function newBoard(array) { 
 // removing elements from the board in html 
   let getBoard = document.getElementById("board");
-  let getBoard2 = document.getElementById("board2");
+  // let getBoard2 = document.getElementById("board2");
 
   while (getBoard.firstChild) {
     getBoard.removeChild(getBoard.firstChild);
   }
 
-  while (getBoard2.firstChild) {
-    getBoard2.removeChild(getBoard2.firstChild);
-  }
+  // while (getBoard2.firstChild) {
+  //   getBoard2.removeChild(getBoard2.firstChild);
+  // }
 
   boardElements(array);
   createBoard(array);
-  createBoard2(array);
+  // createBoard2(array);
 }
 
 function singleBoard(array) { 

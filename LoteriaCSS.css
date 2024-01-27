@@ -9,21 +9,18 @@
 
 .board {
     display: grid;
-    grid-template-columns: repeat(4, 130px); /* Creates 4 columns */
-    grid-template-rows: repeat(4, 185px); /* Creates 4 rows */
-    /* max-width: 480px;
-    max-height: 384px; */
+    grid-template-columns: repeat(4, 150px); /* Creates 4 columns */
+    grid-template-rows: repeat(4, 205px); /* Creates 4 rows */
     border: 2px black solid;
-    /* row-gap: 0px; */
     justify-content: center;
     align-items: center;
 }
 
 .square {
-    width: 115px;
-    height: 170px;
+    width: 135px;
+    height: 185px;
     border: 2px solid black;
-    object-fit: contain; /* This will ensure that images cover the div without stretching */
+    object-fit: fill; /* This will ensure that images cover the div without stretching */
 }
 
 .gridContainer {
